@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+ </head>
+ <body>
+ 
+    <h1>Mad Libs</h1>
+     
+    <ul>
+      <li>Noun: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone's Name: <input type="text" id="person"></li>
+    </ul>
+     
+    <button id="lib-button">Lib it!</button>
+      
+    <p>Generated story: 
+    <span id="story"></span>
+    </p>
+ 
+    <script>
+        var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+
+            var nounInput = document.getElementById("noun").value;
+            var adjectiveInput = document.getElementById("adjective").value;
+            var personInput = document.getElementById("person").value;
+
+            var storyDiv = document.getElementById("story");
+            storyDiv.innerHTML = "Once upon a time, in a the Grand Line. There was a/an " + adjectiveInput + " " + nounInput + "it belongs to " + personInput + ". Everyone adored the " 
+                                    + adjectiveInput + " " + nounInput + ". " + personInput + " explored the Grand line and journeyed to the Red line on the " + adjectiveInput +" " + nounInput + ".";
+        };
+        libButton.addEventListener('click', libIt);
+        
+    </script>
+  
+ </body>
+</html>
