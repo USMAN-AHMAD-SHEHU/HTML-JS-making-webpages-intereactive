@@ -20,11 +20,11 @@
                 seconds.textContent = count;
             };
 
-            var timer = setInterval(countUp, 1000);
+            var timer = window.setInterval(countUp, 1000);
             
             // How can you make it stop counting?
             var stopCountUp = function() {
-                clearInterval(timer);
+                window.clearInterval(timer);
             };
             var stopButton = document.getElementById("stop-button");
             stopButton.addEventListener("click", stopCountUp);
